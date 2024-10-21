@@ -1,8 +1,9 @@
 from django.db import models
+from datetime import datetime
 
 class Article(models.Model):
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=50)
     description = models.TextField()
     views = models.IntegerField(default=0)
     is_published = models.BooleanField(default=True)
-    create_date = models.DateField()
+    create_date = models.DateField(default=datetime.today)
