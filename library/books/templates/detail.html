@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>title: {{ book.title }}</p>
+    <p>description: {{ book.description }}</p>
+    <p>author: {{ book.author }}</p>
+    <p>category: {{ book.category }}</p>
+    <p>rating: {{ book.rating }}</p>
+
+    <a href="{% url 'update-book' book.id %}">udpate</a>
+    <br>
+    <a href="{% url 'home' %}"> go back</a>
+{% endblock%}
